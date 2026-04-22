@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Recipe</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="page">
+    <div class="card form-card">
+        <h1>Add Recipe</h1>
+        <p>The new recipe will be saved into the local XML file.</p>
+
+        <div class="error-box" th:if="${error}" th:text="${error}"></div>
+
+        <form method="post" action="/add-recipe">
+            <label>Recipe title</label>
+            <input type="text" name="title" required th:value="${titleValue}">
+
+            <label>First cuisine type</label>
+            <select name="cuisine1" required>
+                <option th:each="cuisine : ${cuisines}"
+                        th:value="${cuisine}"
+                        th:text="${cuisine}"
+                        th:selected="${cuisine == cuisine1Value}">
+                </option>
+            </select>
+
+            <label>Second cuisine type</label>
+            <select name="cuisine2" required>
+                <option th:each="cuisine : ${cuisines}"
+                        th:value="${cuisine}"
+                        th:text="${cuisine}"
+                        th:selected="${cuisine == cuisine2Value}">
+                </option>
+            </select>
+
+            <label>Difficulty level</label>
+            <select name="difficulty" required>
+                <option th:each="difficulty : ${difficulties}"
+                        th:value="${difficulty}"
+                        th:text="${difficulty}"
+                        th:selected="${difficulty == difficultyValue}">
+                </option>
+            </select>
+
+            <button type="submit">Save Recipe</button>
+        </form>
+
+        <a class="back-link" href="/">Back to home</a>
+    </div>
+</div>
+
+</body>
+</html>

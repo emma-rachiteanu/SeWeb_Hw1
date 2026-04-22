@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add User</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="page">
+    <div class="card form-card">
+        <h1>Add User</h1>
+        <p>The user will be saved into the XML file.</p>
+
+        <div class="error-box" th:if="${error}" th:text="${error}"></div>
+
+        <form method="post" action="/add-user">
+            <label>Name</label>
+            <input type="text" name="name" required th:value="${nameValue}">
+
+            <label>Surname</label>
+            <input type="text" name="surname" required th:value="${surnameValue}">
+
+            <label>Cooking skill level</label>
+            <select name="skillLevel" required>
+                <option th:each="difficulty : ${difficulties}"
+                        th:value="${difficulty}"
+                        th:text="${difficulty}"
+                        th:selected="${difficulty == skillValue}">
+                </option>
+            </select>
+
+            <label>Preferred cuisine</label>
+            <select name="preferredCuisine" required>
+                <option th:each="cuisine : ${cuisines}"
+                        th:value="${cuisine}"
+                        th:text="${cuisine}"
+                        th:selected="${cuisine == cuisineValue}">
+                </option>
+            </select>
+
+            <button type="submit">Save User</button>
+        </form>
+
+        <a class="back-link" href="/">Back to home</a>
+    </div>
+</div>
+
+</body>
+</html>

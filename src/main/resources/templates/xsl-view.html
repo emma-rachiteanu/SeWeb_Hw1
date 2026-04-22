@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>XSL Recipes</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="page page-top">
+    <div class="card wide-card">
+
+        <h1>XSL Recipe Table</h1>
+        <p>
+            Choose a user. Recipes matching that user's skill level are yellow.
+            Other recipes are green.
+        </p>
+
+        <form method="get" action="/recipes-xsl" class="inline-form">
+            <select name="userId" required>
+                <option th:each="user : ${users}"
+                        th:value="${user.id}"
+                        th:text="${user.name + ' ' + user.surname + ' — ' + user.skillLevel}"
+                        th:selected="${user.id.equals(selectedUserId)}">
+                </option>
+            </select>
+
+            <button type="submit">Display</button>
+        </form>
+
+        <div th:if="${selectedUser != null}" class="user-box">
+            XSL comparison user:
+            <strong th:text="${selectedUser.name + ' ' + selectedUser.surname}"></strong>
+            |
+            Skill:
+            <strong th:text="${selectedUser.skillLevel}"></strong>
+        </div>
+
+        <div th:utext="${content}"></div>
+
+        <a class="back-link" href="/">Back to home</a>
+    </div>
+</div>
+
+</body>
+</html>

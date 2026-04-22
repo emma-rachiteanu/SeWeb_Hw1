@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Filter by Cuisine</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="page page-top">
+    <div class="card wide-card">
+        <h1>Filter Recipes by Cuisine</h1>
+        <p>Select a cuisine type. The recipes are retrieved using XPath.</p>
+
+        <form method="get" action="/filter-cuisine" class="inline-form">
+            <select name="cuisine" required>
+                <option value="">Choose cuisine</option>
+                <option th:each="cuisine : ${cuisines}"
+                        th:value="${cuisine}"
+                        th:text="${cuisine}"
+                        th:selected="${cuisine == selectedCuisine}">
+                </option>
+            </select>
+
+            <button type="submit">Search</button>
+        </form>
+
+        <a class="back-link" href="/">Back to home</a>
+
+        <table th:if="${recipes != null}">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Cuisine 1</th>
+                <th>Cuisine 2</th>
+                <th>Difficulty</th>
+                <th>Details</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="recipe : ${recipes}">
+                <td th:text="${recipe.title}"></td>
+                <td th:text="${recipe.cuisine1}"></td>
+                <td th:text="${recipe.cuisine2}"></td>
+                <td th:text="${recipe.difficulty}"></td>
+                <td>
+                    <a th:href="@{/recipe/{id}(id=${recipe.id})}">View</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <p th:if="${recipes != null and #lists.isEmpty(recipes)}">No recipes found for this cuisine.</p>
+    </div>
+</div>
+
+</body>
+</html>

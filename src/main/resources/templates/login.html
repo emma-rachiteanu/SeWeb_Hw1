@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Select User</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="page">
+    <div class="card form-card">
+        <h1>Select Active User</h1>
+        <p>This is a simple XML-based login. No email or password is needed.</p>
+
+        <form method="post" action="/login">
+            <label>Choose user</label>
+
+            <select name="userId" required>
+                <option th:each="user : ${users}"
+                        th:value="${user.id}"
+                        th:text="${user.name + ' ' + user.surname + ' — ' + user.skillLevel + ', ' + user.preferredCuisine}">
+                </option>
+            </select>
+
+            <button type="submit">Use This User</button>
+        </form>
+
+        <a class="back-link" href="/add-user">Create New User</a>
+        <a class="back-link" href="/">Back to home</a>
+    </div>
+</div>
+
+</body>
+</html>

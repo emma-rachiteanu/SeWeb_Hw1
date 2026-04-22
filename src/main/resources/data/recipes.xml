@@ -1,0 +1,1128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<recipeApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="recipes.xsd">
+                        
+    
+    
+    
+    
+    <users>
+                                                
+        
+        
+        
+        
+        <user id="u1">
+                                                                        
+            
+            
+            
+            
+            <name>Emma</name>
+                                                                        
+            
+            
+            
+            
+            <surname>Rachiteanu</surname>
+                                                                        
+            
+            
+            
+            
+            <skillLevel>Beginner</skillLevel>
+                                                                        
+            
+            
+            
+            
+            <preferredCuisine>Italian</preferredCuisine>
+                                                                    
+        
+        
+        
+        
+        </user>
+                                            
+    
+        
+        
+        
+        <user id="u2">
+                                                
+            
+            
+            <name>Test</name>
+                                                
+            
+            
+            <surname>Test</surname>
+                                                
+            
+            
+            <skillLevel>Beginner</skillLevel>
+                                                
+            
+            
+            <preferredCuisine>Italian</preferredCuisine>
+                                            
+        
+        
+        </user>
+                            
+        
+        
+        <user id="u3">
+                                    
+            
+            <name>testt</name>
+                                    
+            
+            <surname>ete</surname>
+                                    
+            
+            <skillLevel>Advanced</skillLevel>
+                                    
+            
+            <preferredCuisine>Italian</preferredCuisine>
+                                
+        
+        </user>
+                    
+        
+        <user id="u4">
+                        
+            <name>Test</name>
+                        
+            <surname>Testettets</surname>
+                        
+            <skillLevel>Beginner</skillLevel>
+                        
+            <preferredCuisine>Italian</preferredCuisine>
+                    
+        </user>
+            
+        <user id="u5">
+            <name>saed</name>
+            <surname>sfds</surname>
+            <skillLevel>Intermediate</skillLevel>
+            <preferredCuisine>European</preferredCuisine>
+        </user>
+    </users>
+                        
+    
+    
+    
+    
+    <recipes>
+                                                
+        
+        
+        
+        
+        <recipe id="r1">
+                                                                        
+            
+            
+            
+            
+            <title>Tomato Pasta</title>
+                                                                        
+            
+            
+            
+            
+            <cuisines>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>Italian</cuisine>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>European</cuisine>
+                                                                                            
+            
+            
+            
+            
+            </cuisines>
+                                                                        
+            
+            
+            
+            
+            <difficulty>Beginner</difficulty>
+                                                                    
+        
+        
+        
+        
+        </recipe>
+                                                
+        
+        
+        
+        
+        <recipe id="r2">
+                                                                        
+            
+            
+            
+            
+            <title>Chicken Curry</title>
+                                                                        
+            
+            
+            
+            
+            <cuisines>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>Indian</cuisine>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>Asian</cuisine>
+                                                                                            
+            
+            
+            
+            
+            </cuisines>
+                                                                        
+            
+            
+            
+            
+            <difficulty>Intermediate</difficulty>
+                                                                    
+        
+        
+        
+        
+        </recipe>
+                                                
+        
+        
+        
+        
+        <recipe id="r3">
+                                                                        
+            
+            
+            
+            
+            <title>Vegetable Stir Fry</title>
+                                                                        
+            
+            
+            
+            
+            <cuisines>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>Asian</cuisine>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>Chinese</cuisine>
+                                                                                            
+            
+            
+            
+            
+            </cuisines>
+                                                                        
+            
+            
+            
+            
+            <difficulty>Beginner</difficulty>
+                                                                    
+        
+        
+        
+        
+        </recipe>
+                                                
+        
+        
+        
+        
+        <recipe id="r4">
+                                                                        
+            
+            
+            
+            
+            <title>Beef Tacos</title>
+                                                                        
+            
+            
+            
+            
+            <cuisines>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>Mexican</cuisine>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>American</cuisine>
+                                                                                            
+            
+            
+            
+            
+            </cuisines>
+                                                                        
+            
+            
+            
+            
+            <difficulty>Intermediate</difficulty>
+                                                                    
+        
+        
+        
+        
+        </recipe>
+                                                
+        
+        
+        
+        
+        <recipe id="r5">
+                                                                        
+            
+            
+            
+            
+            <title>Greek Salad</title>
+                                                                        
+            
+            
+            
+            
+            <cuisines>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>Greek</cuisine>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>European</cuisine>
+                                                                                            
+            
+            
+            
+            
+            </cuisines>
+                                                                        
+            
+            
+            
+            
+            <difficulty>Beginner</difficulty>
+                                                                    
+        
+        
+        
+        
+        </recipe>
+                                                
+        
+        
+        
+        
+        <recipe id="r6">
+                                                                        
+            
+            
+            
+            
+            <title>Ratatouille</title>
+                                                                        
+            
+            
+            
+            
+            <cuisines>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>French</cuisine>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>European</cuisine>
+                                                                                            
+            
+            
+            
+            
+            </cuisines>
+                                                                        
+            
+            
+            
+            
+            <difficulty>Intermediate</difficulty>
+                                                                    
+        
+        
+        
+        
+        </recipe>
+                                                
+        
+        
+        
+        
+        <recipe id="r7">
+                                                                        
+            
+            
+            
+            
+            <title>Butter Chicken</title>
+                                                                        
+            
+            
+            
+            
+            <cuisines>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>Indian</cuisine>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>Asian</cuisine>
+                                                                                            
+            
+            
+            
+            
+            </cuisines>
+                                                                        
+            
+            
+            
+            
+            <difficulty>Advanced</difficulty>
+                                                                    
+        
+        
+        
+        
+        </recipe>
+                                                
+        
+        
+        
+        
+        <recipe id="r8">
+                                                                        
+            
+            
+            
+            
+            <title>Sushi Bowl</title>
+                                                                        
+            
+            
+            
+            
+            <cuisines>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>Japanese</cuisine>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>Asian</cuisine>
+                                                                                            
+            
+            
+            
+            
+            </cuisines>
+                                                                        
+            
+            
+            
+            
+            <difficulty>Intermediate</difficulty>
+                                                                    
+        
+        
+        
+        
+        </recipe>
+                                                
+        
+        
+        
+        
+        <recipe id="r9">
+                                                                        
+            
+            
+            
+            
+            <title>Pancakes</title>
+                                                                        
+            
+            
+            
+            
+            <cuisines>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>American</cuisine>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>European</cuisine>
+                                                                                            
+            
+            
+            
+            
+            </cuisines>
+                                                                        
+            
+            
+            
+            
+            <difficulty>Beginner</difficulty>
+                                                                    
+        
+        
+        
+        
+        </recipe>
+                                                
+        
+        
+        
+        
+        <recipe id="r10">
+                                                                        
+            
+            
+            
+            
+            <title>Mamaliga with Cheese</title>
+                                                                        
+            
+            
+            
+            
+            <cuisines>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>Romanian</cuisine>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>European</cuisine>
+                                                                                            
+            
+            
+            
+            
+            </cuisines>
+                                                                        
+            
+            
+            
+            
+            <difficulty>Beginner</difficulty>
+                                                                    
+        
+        
+        
+        
+        </recipe>
+                                                
+        
+        
+        
+        
+        <recipe id="r11">
+                                                                        
+            
+            
+            
+            
+            <title>Lentil Soup</title>
+                                                                        
+            
+            
+            
+            
+            <cuisines>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>Middle Eastern</cuisine>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>Asian</cuisine>
+                                                                                            
+            
+            
+            
+            
+            </cuisines>
+                                                                        
+            
+            
+            
+            
+            <difficulty>Beginner</difficulty>
+                                                                    
+        
+        
+        
+        
+        </recipe>
+                                                
+        
+        
+        
+        
+        <recipe id="r12">
+                                                                        
+            
+            
+            
+            
+            <title>Lasagna</title>
+                                                                        
+            
+            
+            
+            
+            <cuisines>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>Italian</cuisine>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>European</cuisine>
+                                                                                            
+            
+            
+            
+            
+            </cuisines>
+                                                                        
+            
+            
+            
+            
+            <difficulty>Advanced</difficulty>
+                                                                    
+        
+        
+        
+        
+        </recipe>
+                                                
+        
+        
+        
+        
+        <recipe id="r13">
+                                                                        
+            
+            
+            
+            
+            <title>Chicken Fajitas</title>
+                                                                        
+            
+            
+            
+            
+            <cuisines>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>Mexican</cuisine>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>American</cuisine>
+                                                                                            
+            
+            
+            
+            
+            </cuisines>
+                                                                        
+            
+            
+            
+            
+            <difficulty>Intermediate</difficulty>
+                                                                    
+        
+        
+        
+        
+        </recipe>
+                                                
+        
+        
+        
+        
+        <recipe id="r14">
+                                                                        
+            
+            
+            
+            
+            <title>French Onion Soup</title>
+                                                                        
+            
+            
+            
+            
+            <cuisines>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>French</cuisine>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>European</cuisine>
+                                                                                            
+            
+            
+            
+            
+            </cuisines>
+                                                                        
+            
+            
+            
+            
+            <difficulty>Advanced</difficulty>
+                                                                    
+        
+        
+        
+        
+        </recipe>
+                                                
+        
+        
+        
+        
+        <recipe id="r15">
+                                                                        
+            
+            
+            
+            
+            <title>Falafel Wrap</title>
+                                                                        
+            
+            
+            
+            
+            <cuisines>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>Middle Eastern</cuisine>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>Greek</cuisine>
+                                                                                            
+            
+            
+            
+            
+            </cuisines>
+                                                                        
+            
+            
+            
+            
+            <difficulty>Intermediate</difficulty>
+                                                                    
+        
+        
+        
+        
+        </recipe>
+                                                
+        
+        
+        
+        
+        <recipe id="r16">
+                                                                        
+            
+            
+            
+            
+            <title>Teriyaki Salmon</title>
+                                                                        
+            
+            
+            
+            
+            <cuisines>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>Japanese</cuisine>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>Asian</cuisine>
+                                                                                            
+            
+            
+            
+            
+            </cuisines>
+                                                                        
+            
+            
+            
+            
+            <difficulty>Advanced</difficulty>
+                                                                    
+        
+        
+        
+        
+        </recipe>
+                                                
+        
+        
+        
+        
+        <recipe id="r17">
+                                                                        
+            
+            
+            
+            
+            <title>Paella</title>
+                                                                        
+            
+            
+            
+            
+            <cuisines>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>Spanish</cuisine>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>European</cuisine>
+                                                                                            
+            
+            
+            
+            
+            </cuisines>
+                                                                        
+            
+            
+            
+            
+            <difficulty>Advanced</difficulty>
+                                                                    
+        
+        
+        
+        
+        </recipe>
+                                                
+        
+        
+        
+        
+        <recipe id="r18">
+                                                                        
+            
+            
+            
+            
+            <title>Shepherd's Pie</title>
+                                                                        
+            
+            
+            
+            
+            <cuisines>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>British</cuisine>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>European</cuisine>
+                                                                                            
+            
+            
+            
+            
+            </cuisines>
+                                                                        
+            
+            
+            
+            
+            <difficulty>Intermediate</difficulty>
+                                                                    
+        
+        
+        
+        
+        </recipe>
+                                                
+        
+        
+        
+        
+        <recipe id="r19">
+                                                                        
+            
+            
+            
+            
+            <title>Caesar Salad</title>
+                                                                        
+            
+            
+            
+            
+            <cuisines>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>American</cuisine>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>European</cuisine>
+                                                                                            
+            
+            
+            
+            
+            </cuisines>
+                                                                        
+            
+            
+            
+            
+            <difficulty>Beginner</difficulty>
+                                                                    
+        
+        
+        
+        
+        </recipe>
+                                                
+        
+        
+        
+        
+        <recipe id="r20">
+                                                                        
+            
+            
+            
+            
+            <title>Mushroom Risotto</title>
+                                                                        
+            
+            
+            
+            
+            <cuisines>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>Italian</cuisine>
+                                                                                                
+                
+                
+                
+                
+                <cuisine>European</cuisine>
+                                                                                            
+            
+            
+            
+            
+            </cuisines>
+                                                                        
+            
+            
+            
+            
+            <difficulty>Intermediate</difficulty>
+                                                                    
+        
+        
+        
+        
+        </recipe>
+                                            
+        
+        
+        
+        
+        <recipe id="r21">
+                                                            
+            
+            
+            
+            <title>pizza</title>
+                                                            
+            
+            
+            
+            <cuisines>
+                                                                                
+                
+                
+                
+                <cuisine>French</cuisine>
+                                                                                
+                
+                
+                
+                <cuisine>Italian</cuisine>
+                                                                            
+            
+            
+            
+            </cuisines>
+                                                            
+            
+            
+            
+            <difficulty>Beginner</difficulty>
+                                                        
+        
+        
+        
+        </recipe>
+                                    
+    
+    
+    
+    </recipes>
+                    
+
+
+
+
+</recipeApp>

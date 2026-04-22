@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Recommender</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="page">
+    <div class="card">
+        <h1>Recipe Recommender</h1>
+        <p>
+            Semantic Web application for recommending recipes based on
+            user skill level and preferred cuisine.
+        </p>
+
+        <div class="user-box" th:if="${loggedUser != null}">
+            Active user:
+            <strong th:text="${loggedUser.name + ' ' + loggedUser.surname}"></strong>
+            <br>
+            Skill:
+            <strong th:text="${loggedUser.skillLevel}"></strong>
+            |
+            Preferred cuisine:
+            <strong th:text="${loggedUser.preferredCuisine}"></strong>
+            <br>
+            <a href="/logout">Log out</a>
+        </div>
+
+        <div class="user-box muted-box" th:if="${loggedUser == null}">
+            No active user selected.
+            <br>
+            Recommendations will use the first user from the XML file.
+        </div>
+
+        <div class="menu">
+            <a href="/login">Select User</a>
+            <a href="/recipes">View All Recipes</a>
+            <a href="/add-recipe">Add Recipe</a>
+            <a href="/add-user">Add User</a>
+            <a href="/recommend-skill">Filter by Skill</a>
+            <a href="/recommend-skill-cuisine">Recommend for Active User</a>
+            <a href="/filter-cuisine">Filter by Cuisine</a>
+            <a href="/recipes-xsl">View Recipes with XSL</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="page page-top">
+    <div class="card wide-card">
+        <h1 th:text="${title}"></h1>
+
+        <div class="user-box" th:if="${selectedUser != null}">
+            Selected user:
+            <strong th:text="${selectedUser.name + ' ' + selectedUser.surname}"></strong>
+            <br>
+            Skill:
+            <strong th:text="${selectedUser.skillLevel}"></strong>
+            |
+            Preferred cuisine:
+            <strong th:text="${selectedUser.preferredCuisine}"></strong>
+        </div>
+
+        <p>
+            These recipes are selected using XPath based on the selected user's
+            cooking skill level and preferred cuisine.
+        </p>
+
+        <a class="back-link" href="/">Back to home</a>
+
+        <table th:if="${recipes != null}">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Cuisine 1</th>
+                <th>Cuisine 2</th>
+                <th>Difficulty</th>
+                <th>Details</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="recipe : ${recipes}">
+                <td th:text="${recipe.title}"></td>
+                <td th:text="${recipe.cuisine1}"></td>
+                <td th:text="${recipe.cuisine2}"></td>
+                <td th:text="${recipe.difficulty}"></td>
+                <td>
+                    <a th:href="@{/recipe/{id}(id=${recipe.id})}">View</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <p th:if="${recipes != null and #lists.isEmpty(recipes)}">No matching recipes found.</p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="difficultyType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Beginner"/>
+            <xs:enumeration value="Intermediate"/>
+            <xs:enumeration value="Advanced"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="cuisineType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Italian"/>
+            <xs:enumeration value="Asian"/>
+            <xs:enumeration value="Mexican"/>
+            <xs:enumeration value="French"/>
+            <xs:enumeration value="Greek"/>
+            <xs:enumeration value="Indian"/>
+            <xs:enumeration value="American"/>
+            <xs:enumeration value="Romanian"/>
+            <xs:enumeration value="European"/>
+            <xs:enumeration value="Middle Eastern"/>
+            <xs:enumeration value="Chinese"/>
+            <xs:enumeration value="Japanese"/>
+            <xs:enumeration value="Spanish"/>
+            <xs:enumeration value="British"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="recipeApp">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="users">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="user" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="name" type="xs:string"/>
+                                        <xs:element name="surname" type="xs:string"/>
+                                        <xs:element name="skillLevel" type="difficultyType"/>
+                                        <xs:element name="preferredCuisine" type="cuisineType"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="recipes">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="recipe" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="title" type="xs:string"/>
+                                        <xs:element name="cuisines">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="cuisine" type="cuisineType" minOccurs="2" maxOccurs="2"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="difficulty" type="difficultyType"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Filter by Skill</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="page page-top">
+    <div class="card wide-card">
+        <h1>Filter Recipes by Skill Level</h1>
+
+        <p th:if="${loggedUser != null}">
+            Active user:
+            <strong th:text="${loggedUser.name + ' ' + loggedUser.surname}"></strong>.
+            Their skill level is
+            <strong th:text="${loggedUser.skillLevel}"></strong>.
+        </p>
+
+        <p th:if="${loggedUser == null}">
+            Select a difficulty level manually. The recipes are retrieved using XPath.
+        </p>
+
+        <form method="get" action="/recommend-skill" class="inline-form">
+            <select name="skill" required>
+                <option value="">Choose skill level</option>
+                <option th:each="difficulty : ${difficulties}"
+                        th:value="${difficulty}"
+                        th:text="${difficulty}"
+                        th:selected="${difficulty == selectedSkill}">
+                </option>
+            </select>
+
+            <button type="submit">Search</button>
+        </form>
+
+        <a class="back-link" href="/">Back to home</a>
+
+        <table th:if="${recipes != null}">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Cuisine 1</th>
+                <th>Cuisine 2</th>
+                <th>Difficulty</th>
+                <th>Details</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="recipe : ${recipes}">
+                <td th:text="${recipe.title}"></td>
+                <td th:text="${recipe.cuisine1}"></td>
+                <td th:text="${recipe.cuisine2}"></td>
+                <td th:text="${recipe.difficulty}"></td>
+                <td>
+                    <a th:href="@{/recipe/{id}(id=${recipe.id})}">View</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <p th:if="${recipes != null and #lists.isEmpty(recipes)}">
+            No recipes found for this skill level.
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

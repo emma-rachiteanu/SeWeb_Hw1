@@ -9,9 +9,9 @@ https://github.com/emma-rachiteanu/SeWeb_Hw1
 ### Emma Rachiteanu
 
 
-This project was completed individually by Emma Rachiteanu.
+This project was completed individually.
 
-Main contributions:
+Main contributions (which includes everything in the project):
 - Created the Spring Boot web application structure.
 - Created the XML file containing recipes and users.
 - Created the XSD schema for validating the XML data.
